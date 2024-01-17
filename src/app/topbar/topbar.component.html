@@ -1,6 +1,8 @@
-<!-- topbar.component.html -->
-<div class="topbar">
-  <button>Abrir Menú</button>
-  <img src="" alt="logo">
-  <button>Usuario</button>
-</div>
+<p-toolbar>
+  <ng-template pTemplate="start">
+    <img src="https://primefaces.org/cdn/primeng/images/primeng.svg" alt="logo" />
+  </ng-template>
+  <ng-template pTemplate="end">
+    <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" shape="circle" size="large" />
+  </ng-template>
+</p-toolbar>
