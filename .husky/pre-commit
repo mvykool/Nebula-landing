@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npx pretty-quick --pattern "src/**/*.*(ts|json|html|scss)" --staged && ng lint --fix
+npx lint-staged && ng lint --fix && git add .
