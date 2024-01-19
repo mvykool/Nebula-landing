@@ -1,18 +1,67 @@
-<aside>
-  <div class="bg-white">
-    <div class="sidebar-header">
-      <h3>Angular</h3>
-    </div>
-    <ul class="sidebar-menu">
-      <li class="sidebar-list">
-        <a routerLink="/home" routerLinkActive="active">Home</a>
+<aside class="h-screen border-2 w-10rem flex flex-column">
+  <div class="pt-8">
+    <ul class="flex flex-column px-4 gap-5">
+      <li class="flex align-items-center gap-3 cursor-pointer">
+        <i [class]="iconMapping.home"></i>
+        <a 
+          class="no-underline"
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact: true}"
+          ariaCurrentWhenActive="page"
+          >Home</a>
       </li>
-      <li class="sidebar-list">
-        <a routerLink="/about" routerLinkActive="active">About</a>
+      <li class="flex gap-3 align-items-center cursor-pointer">
+        <i [class]="iconMapping.products"></i>
+        <a
+          class="no-underline"
+          routerLink="/products"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact: true}"
+          ariaCurrentWhenActive="page"
+          >Products</a>
       </li>
-      <li class="sidebar-list">
-        <a routerLink="/contact" routerLinkActive="active">Contact</a>
+      <li class="flex gap-3 align-items-center cursor-pointer">
+        <i [class]="iconMapping.orders"></i>
+        <a 
+          class="no-underline" 
+          routerLink="/#" 
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact: true}"
+          ariaCurrentWhenActive="page"
+          >Orders</a>
+      </li>
+      <li class="flex gap-3 align-items-center cursor-pointer">
+        <i [class]="iconMapping.promotion"></i>
+        <a 
+          class="no-underline" 
+          routerLink="/#" 
+          routerLinkActive="active"
+          ariaCurrentWhenActive="page"
+          >Discounts</a>
+      </li>
+      <li class="flex gap-3 align-items-center cursor-pointer">
+        <i [class]="iconMapping.contact"></i>
+        <a 
+          class="no-underline" 
+          routerLink="/#" 
+          routerLinkActive="active"
+          ariaCurrentWhenActive="page"
+          >Contact</a>
+      </li>
+      <li class="flex gap-3 align-items-center cursor-pointer">
+        <i [class]="iconMapping.settings"></i>
+        <a 
+          class="no-underline" 
+          routerLink="/#" 
+          routerLinkActive="active"
+          ariaCurrentWhenActive="page"
+          >Settings</a>
       </li>
     </ul>
+  </div>
+  
+  <div class="mt-auto mb-5">
+    <h3>Powered by Store</h3>
   </div>
 </aside>
