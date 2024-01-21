@@ -1,5 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
 $colors: (
-  primary: #3498db,
-  secondary: #2ecc71,
-  accent: #e74c3c,
+  primary: #92C7CF,
+  secondary: #AAD7D9,
+  background: #FBF9F1,
+  accent: #E5E1DA,
+  text: #2F3E46,
 );
+
+$header-font: 'Rubik Mono One', monospace;
+
+$paragraph-font: 'Lato', sans-serif;

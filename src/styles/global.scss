@@ -8,6 +8,6 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow: hidden;
-  background: map-get($colors, primary );
-  color: white;
+  background: map-get($colors, background );
+  color: map-get($colors, text );
 }
