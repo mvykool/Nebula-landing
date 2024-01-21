@@ -4,11 +4,12 @@ import { AvatarModule } from 'primeng/avatar';
 import { TabViewModule } from 'primeng/tabview';
 import { MenubarModule } from 'primeng/menubar';
 import { MenuItem } from 'primeng/api';
+import { SidebarComponent } from '../sidebar/sidebar.component';
 
 @Component({
 	selector: 'app-topbar',
 	standalone: true,
-	imports: [ToolbarModule, MenubarModule, AvatarModule, TabViewModule],
+	imports: [ToolbarModule, MenubarModule, AvatarModule, TabViewModule, SidebarComponent],
 	templateUrl: './topbar.component.html',
 	styleUrl: './topbar.component.scss'
 })
