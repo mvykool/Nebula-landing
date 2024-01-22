@@ -1,3 +1,10 @@
+@import '../../../styles/variables';
+
 .topbar-icon {
   color: black;
+}
+
+.topbar-size{
+  width: 100vw !important;
+  background-color: map-get($colors , background );
 }

@@ -1,9 +1,9 @@
-<div class="card flex justify-content-center">
-  <p-sidebar [(visible)]="sidebarVisible">
-    <div class="pt-8">
-      <ul class="flex flex-column px-4 gap-5">
+<aside>
+  <p-sidebar [(visible)]="sidebarVisible" styleClass="w-16rem">
+
+      <ul class="flex flex-column px-5 gap-4 text-xl">
         <li class="flex align-items-center gap-3 cursor-pointer">
-          <i [class]="iconMapping.home"></i>
+          <i [class]="iconMapping.home" class="text-xl"></i>
           <a 
             class="no-underline"
             routerLink="/"
@@ -13,7 +13,7 @@
             >Home</a>
         </li>
         <li class="flex gap-3 align-items-center cursor-pointer">
-          <i [class]="iconMapping.products"></i>
+          <i [class]="iconMapping.products" class="text-xl"></i>
           <a
             class="no-underline"
             routerLink="/products"
@@ -23,7 +23,7 @@
             >Products</a>
         </li>
         <li class="flex gap-3 align-items-center cursor-pointer">
-          <i [class]="iconMapping.orders"></i>
+          <i [class]="iconMapping.orders" class="text-xl"></i>
           <a 
             class="no-underline" 
             routerLink="/#" 
@@ -33,7 +33,7 @@
             >Orders</a>
         </li>
         <li class="flex gap-3 align-items-center cursor-pointer">
-          <i [class]="iconMapping.promotion"></i>
+          <i [class]="iconMapping.promotion" class="text-xl"></i>
           <a 
             class="no-underline" 
             routerLink="/#" 
@@ -42,7 +42,7 @@
             >Discounts</a>
         </li>
         <li class="flex gap-3 align-items-center cursor-pointer">
-          <i [class]="iconMapping.contact"></i>
+          <i [class]="iconMapping.contact" class="text-xl"></i>
           <a 
             class="no-underline" 
             routerLink="/#" 
@@ -51,7 +51,7 @@
             >Contact</a>
         </li>
         <li class="flex gap-3 align-items-center cursor-pointer">
-          <i [class]="iconMapping.settings"></i>
+          <i [class]="iconMapping.settings" class="text-xl"></i>
           <a 
             class="no-underline" 
             routerLink="/#" 
@@ -60,11 +60,10 @@
             >Settings</a>
         </li>
       </ul>
-    </div>
     
-    <div class="mt-auto mb-5">
-      <h3>Powered by Store</h3>
+    <div class="absolute left-0 bottom-0 text-center sidebar__footer">
+      <h3>Powered by e-Store</h3>
     </div>
   </p-sidebar>
-  <p-button (click)="sidebarVisible = true" icon="pi pi-arrow-right"></p-button>
-</div>
+  <p-button class="sidebar-btn" [outlined]="true" severity="secondary" size="small" (click)="sidebarVisible = true" icon="pi pi-align-justify text-lg"></p-button>
+</aside>

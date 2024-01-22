@@ -11,3 +11,13 @@ body {
   background: map-get($colors, background );
   color: map-get($colors, text );
 }
+
+h1 {
+  font-family: $header-font;
+}
+
+p, li, a {
+  font-family: $paragraph-font;
+  color: map-get($colors, text ) !important;
+}
+
