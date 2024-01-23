@@ -1,0 +1,36 @@
+@import '../../../styles/variables';
+
+.app-container_home {
+  width: 100%;
+  height: 100%;
+}
+
+.nested-grid {
+  height: 100%;
+
+  > :nth-child(1),
+  > :nth-child(2) {
+    height: 60%;
+  }
+
+  > :nth-child(3),
+  > :nth-child(4) {
+    height: 40%;
+  }
+}
+
+.main-grid {
+  background-color: map-get($colors, blue-grid );
+}
+
+.green-grid {
+  background-color: map-get($colors, green-grid );
+}
+
+.purple-grind {
+  background-color: map-get($colors, purple-grid );
+}
+
+.red-grid {
+  background-color: map-get($colors, red-grid );
+}
