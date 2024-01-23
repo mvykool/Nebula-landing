@@ -14,6 +14,7 @@ body {
 
 h1 {
   font-family: $header-font;
+  font-size: 40px;
 }
 
 p, li, a {
@@ -21,3 +22,6 @@ p, li, a {
   color: map-get($colors, text ) !important;
 }
 
+span {
+  color: map-get($colors, text-highlighted );
+}

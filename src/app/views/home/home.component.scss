@@ -21,6 +21,10 @@
 
 .main-grid {
   background-color: map-get($colors, blue-grid );
+
+  &_inner {
+    width: 60%;
+  }
 }
 
 .green-grid {
@@ -33,4 +37,16 @@
 
 .red-grid {
   background-color: map-get($colors, red-grid );
+}
+
+.btn-one {
+  background-color: transparent;
+  border: 3px solid white;
+  color: white;
+}
+
+.btn-two {
+  background-color: map-get($colors, accent );
+  border: 3px solid transparent;
+  color: map-get($colors, blue-grid );
 }
