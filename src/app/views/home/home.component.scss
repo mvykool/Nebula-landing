@@ -5,6 +5,10 @@
   height: 100%;
 }
 
+.blue-text {
+  color: map-get($colors, text-highlighted);
+}
+
 .nested-grid {
   height: 100%;
 

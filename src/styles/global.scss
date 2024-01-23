@@ -21,7 +21,3 @@ p, li, a {
   font-family: $paragraph-font;
   color: map-get($colors, text ) !important;
 }
-
-span {
-  color: map-get($colors, text-highlighted );
-}
