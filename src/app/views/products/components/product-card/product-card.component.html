@@ -1,11 +1,9 @@
 <div class="w-full">
 <p-dataView #dv [value]="products" [layout]="layout" [emptyMessage]="'loading..'">
     <ng-template pTemplate="header">
-        <div class="flex justify-content-start">
+        <div class="flex justify-content-between">
             <p-dataViewLayoutOptions></p-dataViewLayoutOptions>
-        </div>
-        <div class="flex justify-content-end">
-            <button (click)="onEdit()">Add Product</button>
+            <button type="button" class="border-none bg-blue-500 hover:bg-blue-600 text-white border-round-md" (click)="onAdd()">Add Product</button>
         </div>
     </ng-template>
     <ng-template let-product pTemplate="list" let-products>
@@ -30,7 +28,7 @@
                         <div class="mr-2 sm:flex-column align-items-center justify-content-between flex h-full sm:align-items-end gap-3 sm:gap-2">
                             <span class="text-2xl font-semibold">{{ '$' + product.price }}</span>
                             <div class="flex justify-content-end align-items-end gap-2">
-                            <button type="button" class="border-none px-4 py-2 border-round-md bg-blue-400 hover:bg-blue-500 text-white cursor-pointer">edit</button>
+                            <button type="button" class="border-none px-4 py-2 border-round-md bg-blue-400 hover:bg-blue-500 text-white cursor-pointer" (click)="onEdit(product)">Edit</button>
                             <button type="button" class="border-none px-4 py-2 border-round-md bg-red-400 hover:bg-red-500 text-white cursor-pointer " (click)="onDelete(product.id)" >delete</button>
                             </div>
                         </div>
@@ -68,12 +66,16 @@
 
 <!--Dialog of details-->
 
-<p-dialog header="Product Details" [(visible)]="visible" [modal]="true" [responsive]="true">
-    <app-single-product *ngIf="visible" [product]="selectedProduct"></app-single-product>
+<p-dialog header="Product Details" [(visible)]="details" [modal]="true" [responsive]="true">
+    <app-single-product *ngIf="details" [product]="selectedProduct"></app-single-product>
 </p-dialog>
 
 <!-- add new product -->
 
-<p-dialog header="Product Details" [(visible)]="edit" [modal]="true" [responsive]="true">
-    <app-add-product (productAdded)="onProductAdded($event)"></app-add-product>
+<p-dialog header="Product Details" [(visible)]="visible" [modal]="true" [responsive]="true">
+    <app-add-product
+    [editProduct]="selectedProduct"
+    (productAdded)="onProductAdded($event)"
+    *ngIf="visible"
+  ></app-add-product>
 </p-dialog>

@@ -1,31 +1,23 @@
-<form (ngSubmit)="onAddProduct()">
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
   <div>
     <label for="title">Title</label>
-    <input id="title" [(ngModel)]="newProduct.title" name="title" required>
+    <input id="title" type="text" formControlName="title">
   </div>
   <div>
     <label for="price">Price</label>
-    <input id="price" [(ngModel)]="newProduct.price" name="price" required>
+    <input id="title" type="number" formControlName="price">
   </div>
   <div>
     <label for="category">Category</label>
-    <input id="category" [(ngModel)]="newProduct.category" name="category">
+    <input id="title" type="text" formControlName="category">
   </div>
   <div>
     <label for="description">Description</label>
-    <input id="description" [(ngModel)]="newProduct.description" name="description">
+    <input id="title" type="text" formControlName="description">
   </div>
   <div>
     <label for="image">Image URL</label>
-    <input id="image" [(ngModel)]="newProduct.image" name="image">
+    <input id="title" type="text" formControlName="image">
   </div>
-  <div>
-    <label for="rate">Rating</label>
-    <input id="rate" [(ngModel)]="newProduct.rating.rate" name="rate">
-  </div>
-  <div>
-    <label for="count">Rating Count</label>
-    <input id="count" [(ngModel)]="newProduct.rating.count" name="count">
-  </div>
-  <button type="submit">Add Product</button>
+  <button type="submit">{{editProduct ? 'Update' : 'Add'}}</button>
 </form>

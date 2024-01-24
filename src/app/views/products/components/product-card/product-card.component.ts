@@ -27,10 +27,10 @@ import { ChangeDetectorRef } from '@angular/core';
 })
 export class ProductCardComponent implements OnInit {
 	@Input() products!: Product[];
-	selectedProduct: Product | null = null;
+	selectedProduct!: Product | null;
 	visible: boolean = false;
-	edit: boolean = false;
-	isLoading: boolean = true;
+	editMode: boolean = false;
+	details: boolean = false;
 	layout: 'list' | 'grid' = 'list';
 
 	constructor(
@@ -49,18 +49,13 @@ export class ProductCardComponent implements OnInit {
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		this.apiService.getAllProducts().subscribe((data: any) => {
 			this.products = data;
-			this.isLoading = false;
+
 			console.log(data);
 		});
 		// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 		(error: unknown) => {
 			console.error('Error fetching data:', error);
-			this.isLoading = false; // Set loading to false in case of an error
 		};
-	}
-
-	onEdit(): void {
-		this.edit = true;
 	}
 
 	onDelete(productId: number): void {
@@ -77,19 +72,27 @@ export class ProductCardComponent implements OnInit {
 	}
 
 	onProductClick(product: Product): void {
-		this.visible = true;
+		this.details = true;
 		this.selectedProduct = product;
 	}
 	closeDialog(): void {
 		this.visible = false;
 	}
 
+	onEdit(product: Product): void {
+		this.editMode = true;
+		this.selectedProduct = product;
+		this.visible = true;
+	}
+
+	onAdd(): void {
+		this.editMode = false;
+		this.selectedProduct = null;
+		this.visible = true;
+	}
+
 	onProductAdded(addedProduct: Product): void {
-		if (addedProduct) {
-			this.products = [addedProduct, ...this.products];
-			this.edit = false;
-			console.log(this.products);
-			this.changeDetector.detectChanges();
-		}
+		console.log('Product added:', addedProduct);
+		this.visible = false;
 	}
 }
