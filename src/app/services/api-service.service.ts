@@ -14,4 +14,16 @@ export class ApiService {
 	getAllProducts(sort = 'desc'): Observable<Array<Product>> {
 		return this.http.get<Array<Product>>(`${STORE_BASE_URL}/products?sort=${sort}`);
 	}
+
+	addProduct(product: Product): Observable<Product> {
+		return this.http.post<Product>(`${STORE_BASE_URL}/products`, product);
+	}
+
+	deleteProduct(id: number): Observable<void> {
+		return this.http.delete<void>(`${STORE_BASE_URL}/products/${id}`);
+	}
+
+	updateProduct(id: number, product: Product): Observable<Product> {
+		return this.http.put<Product>(`${STORE_BASE_URL}/products/${id}`, product);
+	}
 }
