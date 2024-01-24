@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
 $colors: (
   primary: #55bbca,
@@ -14,6 +14,6 @@ $colors: (
   red-grid: #FF9494,
 );
 
-$header-font: 'Rubik Mono One', monospace;
+$header-font: 'Roboto', sans-serif;
 
 $paragraph-font: 'Lato', sans-serif;

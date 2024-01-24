@@ -4,7 +4,7 @@ import { AvatarModule } from 'primeng/avatar';
 import { TabViewModule } from 'primeng/tabview';
 import { MenubarModule } from 'primeng/menubar';
 import { SidebarComponent } from '../sidebar/sidebar.component';
-import { BadgeComponent } from '../../badge/badge.component';
+import { BadgeComponent } from '../badge/badge.component';
 import { InputTextModule } from 'primeng/inputtext';
 
 @Component({

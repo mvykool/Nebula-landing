@@ -1,15 +1,11 @@
-<!-- productos.component.html -->
-<div class="breadcrumbs">
-  <!-- Migaja de pan aquí -->
+
+<div class="flex align-items-start">
+  <app-breadcrumb></app-breadcrumb>
 </div>
 <h1>Products</h1>
-
-<div class="actions-panel">
-  <button>Cambiar Presentación</button>
-</div>
 <app-single-product *ngIf="selectedProduct" [product]="selectedProduct"></app-single-product>
-<div class=" w-full border-1 border-blue-400 overflow-x-hidden">
-    <app-product-card *ngFor="let product of products" [product]="product" (click)="onProductClick(product)"></app-product-card>
-</div>
+<div class="w-full py-2 overflow-x-hidden">
 
-<app-single-product *ngIf="selectedProduct" [product]="selectedProduct"></app-single-product>
+    <app-product-card></app-product-card>
+
+</div>

@@ -15,13 +15,7 @@ export class BreadcrumbComponent implements OnInit {
 	home: MenuItem | undefined;
 
 	ngOnInit(): void {
-		this.items = [
-			{ label: 'Computer' },
-			{ label: 'Notebook' },
-			{ label: 'Accessories' },
-			{ label: 'Backpacks' },
-			{ label: 'Item' }
-		];
+		this.items = [{ label: 'Products' }];
 
 		this.home = { icon: 'pi pi-home', routerLink: '/' };
 	}
