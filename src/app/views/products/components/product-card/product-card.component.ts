@@ -91,8 +91,25 @@ export class ProductCardComponent implements OnInit {
 		this.visible = true;
 	}
 
-	onProductAdded(addedProduct: Product): void {
-		console.log('Product added:', addedProduct);
+	onProductUpdated(product: Product): void {
+		// Find the index of the product in the products array
+		const index = this.products.findIndex((p) => p.id === product.id);
+		// Replace the product at that index with the updated product
+		if (index !== -1) {
+			this.products[index] = product;
+		}
+
+		// Hide the form and trigger change detection
 		this.visible = false;
+		this.changeDetector.detectChanges();
+	}
+
+	onProductAdded(product: Product): void {
+		// Add the new product to the start of the products array
+		this.products = [product, ...this.products];
+
+		// Hide the form and trigger change detection
+		this.visible = false;
+		this.changeDetector.detectChanges();
 	}
 }

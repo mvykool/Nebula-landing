@@ -54,7 +54,7 @@
                         <span class="text-2xl font-semibold">{{ '$' + product.price }}</span>
                         <div class="flex gap-2">
                         <i class="pi pi-star-fill" style="color: #F9D949;"></i>
-                        <span class="font-semibold text-black">{{product.rating.rate}}</span>
+                        <span class="font-semibold text-black">{{product.rating?.rate}}</span>
                         </div>
                     </div>
                 </div>
@@ -76,6 +76,7 @@
     <app-add-product
     [editProduct]="selectedProduct"
     (productAdded)="onProductAdded($event)"
+    (productUpdated)="onProductUpdated($event)"
     *ngIf="visible"
   ></app-add-product>
 </p-dialog>

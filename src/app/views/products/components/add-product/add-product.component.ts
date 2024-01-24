@@ -13,6 +13,7 @@ import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 })
 export class AddProductComponent implements OnInit {
 	@Input() editProduct!: Product | null;
+	@Output() productUpdated: EventEmitter<Product> = new EventEmitter<Product>();
 	@Output() productAdded: EventEmitter<Product> = new EventEmitter<Product>();
 	newProduct: Product = {
 		title: '',
@@ -20,11 +21,7 @@ export class AddProductComponent implements OnInit {
 		id: Date.now(),
 		category: '',
 		description: '',
-		image: '',
-		rating: {
-			rate: 0,
-			count: 0
-		}
+		image: ''
 	};
 
 	productForm!: FormGroup;
@@ -46,6 +43,7 @@ export class AddProductComponent implements OnInit {
 			this.apiService.updateProduct(this.editProduct.id, this.productForm.value).subscribe({
 				next: (updatedProduct: Product) => {
 					console.log('Product updated successfully - id:', updatedProduct.id);
+					this.productUpdated.emit(updatedProduct);
 				},
 				error: (error) => {
 					console.error('Error updating product:', error);
