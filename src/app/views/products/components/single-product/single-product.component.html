@@ -1,6 +1,9 @@
-<div class="border-1">
-  <!-- Mostrar detalles del producto seleccionado -->
-  <h2>{{ product?.title }}</h2>
-  <p>{{ product?.description }}</p>
-  <!-- Agregar más detalles según sea necesario -->
+<div class="details-products_modal">
+  <div class="bg-white flex gap-4 details-prodcuts_modal">
+    <img class="w-20rem" src="{{product?.image}}" alt="{{ product?.title }}">
+    <div>
+      <h2>{{ product?.title }}</h2>
+      <p>{{ product?.description }}</p>
+    </div>
+  </div>
 </div>
