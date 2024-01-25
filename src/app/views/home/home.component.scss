@@ -53,6 +53,7 @@
 @media screen and (max-width: 767px) {
 
   .nested-grid {
+    overflow-y: auto;
     height: 100%;
     overflow-x: hidden !important;
   

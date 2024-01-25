@@ -6,6 +6,7 @@ import { NgForOf, NgFor } from '@angular/common';
 import { NgIf } from '@angular/common';
 import { Product } from '../../models/product.model';
 import { BreadcrumbComponent } from '../../components/breadcrumb/breadcrumb.component';
+import { Title } from '@angular/platform-browser';
 
 @Component({
 	selector: 'app-products',
@@ -15,13 +16,16 @@ import { BreadcrumbComponent } from '../../components/breadcrumb/breadcrumb.comp
 	styleUrl: './products.component.scss'
 })
 export class ProductsComponent implements OnInit {
-	constructor(private apiService: ApiService) {}
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	constructor(
+		private apiService: ApiService,
+		private titleService: Title
+	) {
+		this.titleService.setTitle('e-Store | Products');
+	}
 	products!: Product[];
 
 	ngOnInit(): void {
-		// eslint-disable-next-line @typescript-eslint/no-explicit-any
-		this.apiService.getAllProducts().subscribe((data: any) => {
+		this.apiService.getAllProducts().subscribe((data: Product[]) => {
 			this.products = data;
 		});
 	}

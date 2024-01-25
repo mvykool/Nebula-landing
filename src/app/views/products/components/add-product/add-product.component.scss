@@ -1,0 +1,25 @@
+.form-container {
+  width: 40vw;
+  padding: 2rem 3rem;
+
+  button {
+    width: 7rem;
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+
+  .form-container {
+    width: 100%;
+    padding: 1rem;
+  
+    button {
+      width: 7rem;
+    }
+  }
+}

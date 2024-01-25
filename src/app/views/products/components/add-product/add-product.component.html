@@ -1,4 +1,4 @@
-<form class="flex flex-column gap-2" [formGroup]="productForm" (ngSubmit)="onSubmit()">
+<form class="flex flex-column gap-2 form-container" [formGroup]="productForm" (ngSubmit)="onSubmit()">
   <div class="flex flex-column">
     <label class="font-semibold" for="title">Title:</label>
     <input class="p-inputtext-sm"  pInputText id="title" type="text" formControlName="title">
@@ -9,20 +9,17 @@
   </div>
   <div class="flex flex-column">
     <label class="font-semibold" for="category">Category</label>
-    <input class="p-inputtext-sm"  pInputText id="title" type="text" formControlName="category">
+    <input class="p-inputtext-sm"  pInputText id="category" type="text" formControlName="category">
   </div>
   <div class="flex flex-column">
     <label class="font-semibold" for="description">Description</label>
-    <input class="p-inputtext-sm"  pInputText id="title" type="text" formControlName="description">
+    <input class="p-inputtext-sm" pInputText id="description" type="text" formControlName="description">
   </div>
   <div class="flex flex-column">
     <label class="font-semibold" for="image">Image URL</label>
-    <p-fileUpload
-    #fileUpload
-    [customUpload]="true"
-    formControlName="image"
-    (uploadHandler)="onUpload($event)"
-  ></p-fileUpload>
+    <input class="p-inputtext-sm" pInputText id="image" type="text"  formControlName="image" >
+
+    <img class="h-5 w-5" *ngIf="previewImage || editProduct?.image" [src]="previewImage || editProduct?.image" alt="preview-image">
   </div>
-  <button class="border-none bg-blue-500 hover:bg-blue-600 text-white border-round-md py-2" type="submit">{{editProduct ? 'Update' : 'Add'}}</button>
+  <button [disabled]="productForm.invalid" class="border-none bg-blue-500 hover:bg-blue-600 text-white border-round-md py-2 mt-3" type="submit">{{editProduct ? 'Update' : 'Add'}}</button>
 </form>
