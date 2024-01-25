@@ -1,4 +1,5 @@
-# Main
+# Fake Store API Demo
+![image](https://github.com/mvykool/Cycle/assets/87054757/f6343801-3bc3-406a-97da-3bc77c8d216a)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.8.
 
