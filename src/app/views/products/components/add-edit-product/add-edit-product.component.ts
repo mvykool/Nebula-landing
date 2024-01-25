@@ -8,14 +8,14 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { CommonModule } from '@angular/common';
 
 @Component({
-	selector: 'app-add-product',
+	selector: 'app-add-edit-product',
 	standalone: true,
 	imports: [ReactiveFormsModule, InputTextModule, InputNumberModule, CommonModule],
 	providers: [MessageService],
-	templateUrl: './add-product.component.html',
-	styleUrl: './add-product.component.scss'
+	templateUrl: './add-edit-product.component.html',
+	styleUrl: './add-edit-product.component.scss'
 })
-export class AddProductComponent implements OnInit {
+export class AddEditProductComponent implements OnInit {
 	@Input() editProduct!: Product | null;
 	@Output() productUpdated: EventEmitter<Product> = new EventEmitter<Product>();
 	@Output() productAdded: EventEmitter<Product> = new EventEmitter<Product>();

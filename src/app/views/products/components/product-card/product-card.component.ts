@@ -5,8 +5,8 @@ import { ButtonModule } from 'primeng/button';
 import { CommonModule } from '@angular/common';
 import { TagModule } from 'primeng/tag';
 import { DataViewModule } from 'primeng/dataview';
-import { SingleProductComponent } from '../single-product/single-product.component';
-import { AddProductComponent } from '../add-product/add-product.component';
+import { ProductDetailsComponent } from '../product-details/product-details.component';
+import { AddEditProductComponent } from '../add-edit-product/add-edit-product.component';
 import { DialogModule } from 'primeng/dialog';
 import { ChangeDetectorRef } from '@angular/core';
 
@@ -18,9 +18,9 @@ import { ChangeDetectorRef } from '@angular/core';
 		CommonModule,
 		TagModule,
 		DataViewModule,
-		SingleProductComponent,
+		ProductDetailsComponent,
 		DialogModule,
-		AddProductComponent
+		AddEditProductComponent
 	],
 	templateUrl: './product-card.component.html',
 	styleUrl: './product-card.component.scss'

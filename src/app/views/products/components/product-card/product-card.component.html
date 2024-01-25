@@ -63,15 +63,15 @@
 <!--Dialog of details-->
 
 <p-dialog header="Product Details" [(visible)]="details" [modal]="true" [responsive]="true">
-    <app-single-product *ngIf="details" [product]="selectedProduct"></app-single-product>
+    <app-product-details *ngIf="details" [product]="selectedProduct"></app-product-details>
 </p-dialog>
 
 <!--Dialog for edit/add-->
 <p-dialog header="Product Details" [(visible)]="visible" [modal]="true" [responsive]="true">
-    <app-add-product
+    <app-add-edit-product
     [editProduct]="selectedProduct"
     (productAdded)="onProductAdded($event)"
     (productUpdated)="onProductUpdated($event)"
     *ngIf="visible"
-  ></app-add-product>
+  ></app-add-edit-product>
 </p-dialog>
