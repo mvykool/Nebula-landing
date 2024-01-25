@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { RouterTestingModule } from '@angular/router/testing';
 import { TopbarComponent } from './topbar.component';
 
 describe('TopbarComponent', () => {
@@ -8,7 +8,7 @@ describe('TopbarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TopbarComponent]
+      imports: [TopbarComponent, RouterTestingModule ]
     })
     .compileComponents();
     

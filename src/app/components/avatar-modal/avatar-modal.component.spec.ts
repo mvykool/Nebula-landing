@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { RouterTestingModule } from '@angular/router/testing';
 import { AvatarModalComponent } from './avatar-modal.component';
 
 describe('AvatarModalComponent', () => {
@@ -8,7 +8,7 @@ describe('AvatarModalComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AvatarModalComponent]
+      imports: [AvatarModalComponent, RouterTestingModule ]
     })
     .compileComponents();
     

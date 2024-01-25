@@ -6,11 +6,12 @@ import { FormGroup, FormControl, ReactiveFormsModule, Validators } from '@angula
 import { InputTextModule } from 'primeng/inputtext';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
 	selector: 'app-add-edit-product',
 	standalone: true,
-	imports: [ReactiveFormsModule, InputTextModule, InputNumberModule, CommonModule],
+	imports: [ReactiveFormsModule, InputTextModule, InputNumberModule, CommonModule, HttpClientModule],
 	providers: [MessageService],
 	templateUrl: './add-edit-product.component.html',
 	styleUrl: './add-edit-product.component.scss'
