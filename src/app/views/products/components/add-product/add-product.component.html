@@ -1,23 +1,28 @@
-<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
-  <div>
-    <label for="title">Title</label>
-    <input id="title" type="text" formControlName="title">
+<form class="flex flex-column gap-2" [formGroup]="productForm" (ngSubmit)="onSubmit()">
+  <div class="flex flex-column">
+    <label class="font-semibold" for="title">Title:</label>
+    <input class="p-inputtext-sm"  pInputText id="title" type="text" formControlName="title">
   </div>
-  <div>
-    <label for="price">Price</label>
-    <input id="title" type="number" formControlName="price">
+  <div class="flex flex-column">
+    <label class="font-semibold" for="price">Price</label>
+    <p-inputNumber inputId="price" type="number" formControlName="price"></p-inputNumber>
   </div>
-  <div>
-    <label for="category">Category</label>
-    <input id="title" type="text" formControlName="category">
+  <div class="flex flex-column">
+    <label class="font-semibold" for="category">Category</label>
+    <input class="p-inputtext-sm"  pInputText id="title" type="text" formControlName="category">
   </div>
-  <div>
-    <label for="description">Description</label>
-    <input id="title" type="text" formControlName="description">
+  <div class="flex flex-column">
+    <label class="font-semibold" for="description">Description</label>
+    <input class="p-inputtext-sm"  pInputText id="title" type="text" formControlName="description">
   </div>
-  <div>
-    <label for="image">Image URL</label>
-    <input id="title" type="text" formControlName="image">
+  <div class="flex flex-column">
+    <label class="font-semibold" for="image">Image URL</label>
+    <p-fileUpload
+    #fileUpload
+    [customUpload]="true"
+    formControlName="image"
+    (uploadHandler)="onUpload($event)"
+  ></p-fileUpload>
   </div>
-  <button type="submit">{{editProduct ? 'Update' : 'Add'}}</button>
+  <button class="border-none bg-blue-500 hover:bg-blue-600 text-white border-round-md py-2" type="submit">{{editProduct ? 'Update' : 'Add'}}</button>
 </form>

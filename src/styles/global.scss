@@ -12,7 +12,7 @@ body {
   color: map-get($colors, text );
 }
 
-h1 {
+h1, h2 {
   font-family: $header-font;
   font-size:  45px;
   font-weight: 900;
@@ -21,4 +21,12 @@ h1 {
 p, li, a {
   font-family: $paragraph-font;
   color: map-get($colors, text ) !important;
+}
+
+
+@media screen and (max-width: 767px) {
+  
+h1, h2{
+  font-size:  25px;
+}
 }

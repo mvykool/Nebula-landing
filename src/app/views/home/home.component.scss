@@ -3,6 +3,7 @@
 .app-container_home {
   width: 100%;
   height: 100%;
+  overflow-x: hidden !important;
 }
 
 .blue-text {
@@ -49,8 +50,26 @@
   color: white;
 }
 
-.btn-two {
-  background-color: map-get($colors, accent );
-  border: 3px solid transparent;
-  color: map-get($colors, blue-grid );
+@media screen and (max-width: 767px) {
+
+  .nested-grid {
+    height: 100%;
+    overflow-x: hidden !important;
+  
+    > :nth-child(1){
+      height: 60%;
+    }
+    > :nth-child(2),
+    > :nth-child(3),
+    > :nth-child(4) {
+      height: calc(40% / 3);
+    }
+  }
+
+  
+.main-grid {
+  &_inner {
+    width: 100%;
+  }
+}
 }

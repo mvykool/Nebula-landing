@@ -1,13 +1,18 @@
 import { Component, EventEmitter, Output, OnInit, Input } from '@angular/core';
 import { ApiService } from '../../../../services/api-service.service';
 import { Product } from '../../../../models/product.model';
-//import { FormsModule } from '@angular/forms';
+import { MessageService } from 'primeng/api';
 import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
+import { InputTextModule } from 'primeng/inputtext';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { FileUploadModule } from 'primeng/fileupload';
+import { FileUploadHandlerEvent } from 'primeng/fileupload';
 
 @Component({
 	selector: 'app-add-product',
 	standalone: true,
-	imports: [ReactiveFormsModule],
+	imports: [ReactiveFormsModule, InputTextModule, InputNumberModule, FileUploadModule],
+	providers: [MessageService],
 	templateUrl: './add-product.component.html',
 	styleUrl: './add-product.component.scss'
 })
@@ -15,6 +20,8 @@ export class AddProductComponent implements OnInit {
 	@Input() editProduct!: Product | null;
 	@Output() productUpdated: EventEmitter<Product> = new EventEmitter<Product>();
 	@Output() productAdded: EventEmitter<Product> = new EventEmitter<Product>();
+	uploadedFiles: unknown[] = [];
+
 	newProduct: Product = {
 		title: '',
 		price: 0,
@@ -26,7 +33,10 @@ export class AddProductComponent implements OnInit {
 
 	productForm!: FormGroup;
 
-	constructor(private apiService: ApiService) {}
+	constructor(
+		private apiService: ApiService,
+		private messageService: MessageService
+	) {}
 
 	ngOnInit(): void {
 		this.productForm = new FormGroup({
@@ -36,6 +46,14 @@ export class AddProductComponent implements OnInit {
 			image: new FormControl(this.editProduct ? this.editProduct.image : ''),
 			category: new FormControl(this.editProduct ? this.editProduct.category : '')
 		});
+	}
+
+	onUpload(event: FileUploadHandlerEvent): void {
+		for (const file of event.files) {
+			this.uploadedFiles.push(file);
+		}
+
+		this.messageService.add({ severity: 'info', summary: 'File Uploaded', detail: '' });
 	}
 
 	onSubmit(): void {

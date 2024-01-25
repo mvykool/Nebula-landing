@@ -4,40 +4,39 @@
         <div class="grid nested-grid">
 
           <!--blue grid-->
-            <div class="col-9">
-                <div class="text-center px-8 py-4 border-round-xl h-full main-grid font-bold">
+            <div class="col-12 md:col-9">
+                <div class="text-center px-3 md:px-8 py-4 border-round-xl h-full main-grid font-bold">
                   <div class="main-grid_inner">
-                    <h1 class="text-white text-left"><span class="blue-text">e-Store:</span> your one-stop online shop</h1>
-                    <p class="text-left text-white font-normal text-lg line-height-2">Welcome to e-store. your go-to online destination for an eclectic array of products. Discover a world of convenience and variety as you explore our extensive collection, ranging from everyday essentials to unique finds. Shop with confidence, knowing that our store is your ultimate source for all your needs, offering quality, diversity, and unparalleled convenience at your fingertips.</p>
+                    <h1 class="text-white text-center md:text-left"><span class="blue-text">e-Store:</span> your one-stop online shop</h1>
+                    <p class="text-center md:text-left text-white font-normal text-md md:text-lg line-height-2">Welcome to e-store. your go-to online destination for an eclectic array of products. Discover a world of convenience and variety as you explore our extensive collection, ranging from everyday essentials to unique finds. Shop with confidence, knowing that our store is your ultimate source for all your needs, offering quality, diversity, and unparalleled convenience at your fingertips.</p>
                   </div>
-                  <div class="flex justify-content-start gap-5 pt-2">
-                    <button type="button" class="btn-one border-round-xl py-2 px-5 text-lg cursor-pointer">Products</button>
-                    <button type="button" class="btn-two border-round-xl py-2 text-lg px-5 cursor-pointer">More</button>
+                  <div class="flex justify-content-center md:justify-content-start  gap-5 pt-2">
+                    <button routerLink="/products" type="button" class="btn-one border-round-xl py-1 md:py-2 px-3 md:px-5 text-sm md:text-lg cursor-pointer">Products</button>
                   </div>
                 </div>
             </div>
 
             <!--green grid-->
-            <div class="col-3">
-                <div class="text-center px-4 py-4 border-round-xl h-full green-grid font-bold w-full flex relative justify-content-center flex-column">
-                  <h1 class="text-white">Plants</h1>
-                  <img class="relative" src="../../../assets/green-grid.png" alt="plant">
+            <div class="col-12 md:col-3">
+                <div class="text-center px-1 md:px-4 py-1 md:py-4 border-round-xl h-full green-grid font-bold w-full flex relative justify-content-center flex-column">
+                  <h2 class="text-white">Plants</h2>
+                  <img class="relative hidden md:block" src="../../../assets/green-grid.png" alt="plant">
                 </div>
             </div>
 
             <!--purple grid-->
-            <div class="col-6">
-                <div class="text-center px-8 py-4 border-round-xl h-full purple-grind font-bold w-full flex relative justify-content-center">
-                  <h1 class="text-white text-left">Hardware, and technology</h1>
-                  <img class="right-0 bottom-0 h-14rem absolute" src="../../../assets/purple-grid.png" alt="hard-disk">
+            <div class="col-12 md:col-6">
+                <div class="text-center px-1 md:px-8 py-1 md:py-4 border-round-xl h-full purple-grind font-bold w-full flex relative justify-content-center">
+                  <h2 class="text-white text-center md:text-left">Hardware, and technology</h2>
+                  <img class="right-0 bottom-0 h-14rem absolute hidden md:block" src="../../../assets/purple-grid.png" alt="hard-disk">
                 </div>
             </div>
 
             <!--red grid-->
-            <div class="col-6">
-              <div class="text-center px-8 py-4 border-round-xl h-full red-grid font-bold w-full relative">
-                <h1 class="text-white text-left w-20rem">Video games</h1>
-                <img class="right-0 bottom-0 h-14rem absolute" src="../../../assets/red-grid.png" alt="video-games">
+            <div class="col-12 md:col-6">
+              <div class="text-center px-1 md:px-8 py-1 md:py-4 border-round-xl h-full red-grid font-bold w-full relative">
+                <h2 class="text-white text-center md:text-left w-20rem">Video games</h2>
+                <img class="right-0 bottom-0 h-14rem absolute hidden md:block" src="../../../assets/red-grid.png" alt="video-games">
               </div>
           </div>
         </div>
