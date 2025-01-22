@@ -8,7 +8,7 @@ module.exports = {
         secondaryColor: "rgb(161, 163, 247)",
         primaryText: "rgb(255,255,255)",
         secondaryText: "rgb(174, 178, 183)",
-        bgDark1: "rgb(31, 32, 35)",
+        bgDark1: "#323232",
         bgDark2: "rgb(38, 39, 43)",
         bgDark3: "rgb(48, 49, 54)",
         bgDark3Hover: "rgb(55, 56, 62)",
