@@ -29,11 +29,11 @@ export const Navbar = () => {
         >
           <a href="/#home" aria-label="Home">
             <div className="flex justify-start items-center grow basis-0">
-              <div className="text-white mr-2 text-6xl">
-                <TailcastLogo />
+              <div className="text-white flex items-center mr-2 text-6xl">
+                <i className="bx bxs-analyse text-lg md:text-xl text-primaryColor"></i>
               </div>
               <div className="text-white font-['Inter'] font-bold text-xl">
-                Tailcast
+                Neb<span className="text-primaryColor">u</span>la
               </div>
             </div>
           </a>
