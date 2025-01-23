@@ -109,7 +109,7 @@ export const Navbar = () => {
               ))}
               <a
                 className="outlined-button pl-6 pr-8 pt-2 pb-2  flex"
-                href="https://github.com/matt765/Tidestream"
+                href="https://github.com/mvykool/Nebula"
                 target="_blank"
               >
                 <GithubIcon />
