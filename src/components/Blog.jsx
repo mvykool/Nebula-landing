@@ -36,8 +36,8 @@ export const Blog = () => (
         <div className="container px-4 mb-20">
           <div className="max-w-2xl text-center lg:text-left mb-16 mx-auto lg:ml-0 lg:mr-0">
             <span className="block-subtitle">What's new?</span>
-            <h2 className="my-6 text-4xl flex lg:text-5xl font-bold font-heading text-primaryText">
-              What's next for Neb <h2 className="text-primaryColor">u</h2> la?
+            <h2 className="my-6 text-2xl flex justify-center lg:text-5xl font-bold font-heading text-primaryText">
+              What's next for Neb<h2 className="text-primaryColor">u</h2> la?
             </h2>
             <p className="mb-6 text-secondaryText">
               Stay updated with Nebula's latest changes, and updates.
@@ -50,7 +50,7 @@ export const Blog = () => (
                   <img
                     src={blogData[0].image}
                     alt={blogData[0].title}
-                    className="rounded-3xl mb-6 h-[70%] w-full"
+                    className="rounded-3xl mb-6 h-[50%] md:h-[70%] w-full"
                     aria-label={blogData[0].title}
                   />
                   <h3 className="mb-4 text-2xl font-bold font-heading text-primaryText">
