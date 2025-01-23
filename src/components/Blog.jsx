@@ -1,24 +1,24 @@
 import { motion } from "framer-motion";
 
-import blog1 from "../assets/images/blog1.png";
-import blog2 from "../assets/images/blog2.png";
-import blog3 from "../assets/images/blog3.png";
+import blog1 from "../assets/images/ai.jpg";
+import blog2 from "../assets/images/mk.png";
+import blog3 from "../assets/images/group.jpg";
 
 const blogData = [
   {
-    title: "AI and Machine Learning",
+    title: "AI integration",
     subtitle:
-      "Discover insights and trends in the world of data analytics. Delve into how AI and machine learning are revolutionizing industries",
+      "powerful project creation assisted by ai insights, perfect to accelereate documentation fabrication",
     image: blog1.src,
   },
   {
-    title: "Data-Driven Analytics",
-    subtitle: "Explore the impact of AI and ML on data analytics.",
+    title: "Markdown option",
+    subtitle: "Alternative format for your projects",
     image: blog2.src,
   },
   {
-    title: "Real-Time Data Processing",
-    subtitle: "Learn about the importance of processing real-time.",
+    title: "Group-project",
+    subtitle: "Enabling project collaboration in real-time",
     image: blog3.src,
   },
 ];
@@ -35,12 +35,12 @@ export const Blog = () => (
       >
         <div className="container px-4 mb-20">
           <div className="max-w-2xl text-center lg:text-left mb-16 mx-auto lg:ml-0 lg:mr-0">
-            <span className="block-subtitle">Our Blog</span>
-            <h2 className="mt-6 mb-6 text-4xl lg:text-5xl font-bold font-heading text-primaryText">
-              Latest Insights
+            <span className="block-subtitle">What's new?</span>
+            <h2 className="my-6 text-4xl flex lg:text-5xl font-bold font-heading text-primaryText">
+              What's next for Neb <h2 className="text-primaryColor">u</h2> la?
             </h2>
             <p className="mb-6 text-secondaryText">
-              Stay updated with the latest trends and insights in our industry.
+              Stay updated with Nebula's latest changes, and updates.
             </p>
           </div>
           <div className="flex 2xl:w-[1200px] lg:w-[1000px] xl:w-[1150px] flex-wrap -mx-4 items-start h-auto sm:h-[30rem] lg:h-[31rem]  xl:h-[35rem]">
@@ -50,7 +50,7 @@ export const Blog = () => (
                   <img
                     src={blogData[0].image}
                     alt={blogData[0].title}
-                    className="rounded-3xl mb-6  w-full"
+                    className="rounded-3xl mb-6 h-[70%] w-full"
                     aria-label={blogData[0].title}
                   />
                   <h3 className="mb-4 text-2xl font-bold font-heading text-primaryText">
@@ -81,7 +81,7 @@ export const Blog = () => (
                   <img
                     src={post.image}
                     alt={post.title}
-                    className="rounded-3xl mb-6 w-[9rem] h-[9rem] lg:w-auto lg:h-auto xl:w-full"
+                    className="rounded-3xl mb-6 w-[9rem] h-[9rem] lg:w-auto lg:h-auto xl:w-[50%]"
                     aria-label={post.title}
                   />
                 </a>
