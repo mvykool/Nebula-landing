@@ -43,13 +43,13 @@ export const Hero = () => {
           transition={{ duration: 0.5, delay: 0.15 }}
         >
           <div className="flex flex-col gap-2 sm:flex-row mt-14 mb-24 sm:mb-40 justify-center">
-            <button
+            <a
+              href="https://nebula-client.vercel.app/"
               className="w-64 sm:w-52 h-12 rounded-xl font-bold text-primaryText border border-solid  flex justify-center items-center cursor-pointer hover:bg-[#E97777] bg-[#FF8080] transition"
-              onClick={() => setIsModalOpen(true)}
               aria-label="Live demo"
             >
               Live demo
-            </button>
+            </a>
           </div>
         </motion.div>
         <motion.div

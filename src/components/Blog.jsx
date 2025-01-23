@@ -36,7 +36,7 @@ export const Blog = () => (
         <div className="container px-4 mb-20">
           <div className="max-w-2xl text-center lg:text-left mb-16 mx-auto lg:ml-0 lg:mr-0">
             <span className="block-subtitle">What's new?</span>
-            <h2 className="my-6 text-2xl flex justify-center lg:text-5xl font-bold font-heading text-primaryText">
+            <h2 className="my-6 text-2xl flex justify-center md:justify-start lg:text-5xl font-bold font-heading text-primaryText">
               What's next for Neb<h2 className="text-primaryColor">u</h2> la?
             </h2>
             <p className="mb-6 text-secondaryText">

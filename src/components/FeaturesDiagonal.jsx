@@ -40,13 +40,14 @@ export const FeaturesDiagonal = () => {
               Document, create shareable guidelines, documentation, in a easy
               accessible way.{" "}
             </p>
-            <button
+            <a
+              href="https://nebula-client.vercel.app/"
               className="w-[210px] h-12 contained-button mr-10 "
               onClick={() => setIsModalOpen(true)}
               aria-label="Get started"
             >
               Get Started
-            </button>
+            </a>
           </div>
           <div className="w-4/5 lg:w-1/2 lg:pl-16 flex justify-center mx-auto pt-16 lg:pt-0">
             <img
@@ -65,10 +66,8 @@ export const FeaturesDiagonal = () => {
           preserveAspectRatio="none"
           className="bg-bgDark2 fill-bgDark2"
         >
-          <path
-            d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
-            className="bg-bgDark1 fill-bgDark1"
-          ></path>
+          <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z"></path>
+          className="bg-bgDark1 fill-bgDark1"
         </svg>
       </div>
       {isModalOpen && (
